@@ -1,0 +1,40 @@
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  .login-card {
+    background-color: black;
+    width: 450px;
+    padding: 60px 48px;
+    .heading{
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 16px;
+    }
+  }
+}
+
+.form-field {
+  margin-bottom: 16px;
+  .input {
+    width: 100%;
+    background-color: rgb(65, 63, 63);
+    padding: 10px 10px;
+    border-radius: 2px;
+    color: white;
+  }
+}
+.action-field {
+  display: flex;
+  justify-content: center;
+  .login-btn {
+    background-color: red;
+    padding: 10px 12px;
+    width: 100%;
+    border-radius: 2px;
+    color: white;
+    font-weight: bold;
+  }
+}

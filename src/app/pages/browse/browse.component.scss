@@ -1,0 +1,59 @@
+.browse-page {
+  background-color: black;
+  .banner {
+    height: 100vh;
+    width: 100vw;
+    .banner-img {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .banner-video {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .banner-movie-info {
+      color: white;
+      position: relative;
+      display: flex;
+      z-index: 9999;
+      flex-direction: column;
+      top: 40%;
+      padding-left: 2rem;
+      max-width: 600px;
+      .banner-heading {
+        font-size: 48px;
+        font-weight: bold;
+      }
+      .banner-description {
+        font-size: 24px;
+      }
+      .banner-action {
+        display: flex;
+        padding: 10px 20px;
+        gap: 32px;
+        .play-btn {
+          background-color: white;
+          color: black;
+          font-weight: bold;
+          font-size: 20px;
+          padding: 12px 12px;
+          border-radius: 4px;
+          width: 150px;
+        }
+        .info-btn {
+          background-color: #424040;
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          padding: 12px 12px;
+          border-radius: 4px;
+          width: 200px;
+        }
+      }
+    }
+  }
+}

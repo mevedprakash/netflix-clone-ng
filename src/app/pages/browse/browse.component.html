@@ -1,0 +1,48 @@
+<div class="browse-page">
+  <app-header></app-header>
+  <div class="banner">
+    @if(bannerMovie && bannerMovie.videoKey){
+    <iframe
+      class="banner-video"
+      [src]="
+        domSanitise.bypassSecurityTrustResourceUrl(
+          'https://www.youtube.com/embed/' + bannerMovie.videoKey + '?autoplay=1&mute=1&showinfo=0&controls=0'
+        )
+      "
+      frameborder="0"
+    ></iframe>
+    }@else{
+    <img
+      class="banner-img"
+      [src]="tmdbConfig.imagePath + bannerMovie.poster_path"
+      alt="banner image"
+    />
+    }
+    <div class="banner-movie-info">
+      <h4 class="banner-heading">{{ bannerMovie.original_title }}</h4>
+      <p class="banner-description">{{ bannerMovie.overview }}</p>
+      <div class="banner-action">
+        <button type="button" class="play-btn">Play</button>
+        <button type="button" class="info-btn">More Info</button>
+      </div>
+    </div>
+  </div>
+  <div class="movie-categories px-16 relative z-50 -mt-40">
+    <app-movie-category
+      [title]="'Popular'"
+      [movieList]="popularMovies"
+    ></app-movie-category>
+    <app-movie-category
+      [title]="'Top Rated'"
+      [movieList]="topRatedMovies"
+    ></app-movie-category>
+    <app-movie-category
+      [title]="'Upcomming'"
+      [movieList]="upcommingMovies"
+    ></app-movie-category>
+    <app-movie-category
+      [title]="'Now Playing'"
+      [movieList]="nowPlayingMovies"
+    ></app-movie-category>
+  </div>
+</div>
